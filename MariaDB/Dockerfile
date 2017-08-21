@@ -39,6 +39,8 @@ RUN ./fix-permissions.sh /var/lib/mysql/   && \
 
 COPY docker-entrypoint.sh /
 
+RUN chmod +x /docker-entrypoint.sh
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Place VOLUME statement below all changes to /var/lib/mysql
