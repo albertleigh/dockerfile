@@ -6,16 +6,16 @@
 # docker build --rm -t winslow90/mariadb55:latest .
 #
 # Create:
-# docker create -it -p 3306:3306 --name mariadb5501 winslow90/mariadb55
+# docker run -p 3306:3306 --name=mariadb5501 -e MYSQL_ROOT_PASSWORD=password -d winslow90/mariadb55
 #
 # Start:
 # docker start mariadb
 #
 # Connect with mongo
-# docker exec -it mariadb
+# docker exec -it mariadb5501
 #
 # Connect bash
-# docker exec -it mariadb bash
+# docker exec -it mariadb5501 bash
 
 
 FROM centos:centos7
